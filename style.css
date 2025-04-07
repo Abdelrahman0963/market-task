@@ -7,6 +7,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+body::selection {
+  background: #dcb14a;
+  color: #fff;
+}
 body {
   font-family: var(--font-ro);
 }
