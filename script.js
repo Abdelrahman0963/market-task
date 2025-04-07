@@ -4,7 +4,6 @@ window.addEventListener('scroll', () => {
     const ss = document.getElementById('scroll-Shop');
     const sp = document.getElementById('scroll-Product');
     const sb = document.getElementById('scroll-Blog');
-
     if (window.pageYOffset < 2854) {
         sd.classList.add("bord");
     } else {
