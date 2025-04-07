@@ -418,6 +418,9 @@ section {
   #shop {
     height: 100%;
   }
+  .shop {
+    height: 100%;
+  }
   .shop-cards {
     display: grid;
     grid-template-columns: 1fr;
