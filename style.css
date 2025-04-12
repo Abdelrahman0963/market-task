@@ -479,6 +479,9 @@ section {
 /* End sec shop  */
 /* Start sec product  */
 #product {
+  height: 100%;
+}
+.product {
   height: 160vh;
 }
 .product-text {
