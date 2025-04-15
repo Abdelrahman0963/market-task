@@ -872,8 +872,8 @@ section {
   color: #dcb14a;
   text-decoration-line: none;
 }
+
 .bar-in-click {
-  display: none;
   width: 34%;
   position: absolute;
   right: 0;
@@ -884,6 +884,15 @@ section {
   line-height: 2.5em;
   overflow-y: scroll;
   box-shadow: -20px 0px 150px 1000px #00000073;
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+}
+.bar-in-click.show {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .bar-in-click {
