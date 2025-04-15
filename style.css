@@ -822,3 +822,42 @@ section {
   }
 }
 /* End sec blog  */
+
+/* Start in page 2 */
+.header-page2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+.header-page2 ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+@media (max-width: 992px) {
+  .header-page2 ul {
+    display: none;
+  }
+}
+.header-page2 ul a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+}
+.header-icons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  gap: 2em;
+}
+.header-icons i {
+  font-size: 25px;
+  cursor: pointer;
+}
+/* End in page 2 */
