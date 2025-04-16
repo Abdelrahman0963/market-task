@@ -49,14 +49,14 @@ window.addEventListener("scroll", () => {
     }
 });
 // scroll icon in demos
-function angle() {
+document.addEventListener("DOMContentLoaded", () => {
     const angle = document.getElementById('angle-scrole');
-    angle.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        })
-    })
-}
-angle();
-console.log(pageYOffset);
+    if (angle) {
+        angle.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
+});
