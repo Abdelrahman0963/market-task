@@ -58,3 +58,6 @@ leftArrow.addEventListener("click", () => {
     updateSlide(currentSlide);
 });
 
+
+
+
