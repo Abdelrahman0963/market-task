@@ -1653,3 +1653,38 @@ section {
   align-items: center;
   justify-content: center;
 }
+/* Start Fotter 3 */
+.footer3 {
+  width: 100%;
+  background: #f4f5f7;
+  padding: 80px;
+}
+.footer3 h6 {
+  font-weight: 600;
+  font-size: 20px;
+}
+.footer3 p {
+  font-size: 15px;
+  font-weight: 300;
+}
+.footer3 p a {
+  color: #000;
+  text-decoration-line: none;
+  -moz-text-decoration-line: none;
+}
+.footer3 p a:hover {
+  color: #dcb14a;
+}
+.footer3 .links-social a {
+  color: #000;
+}
+.footer3 .links-social a:hover {
+  color: #dcb14a;
+}
+@media (max-width: 767px) {
+  .footer3 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* End Fotter 3 */
