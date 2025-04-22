@@ -58,6 +58,14 @@ leftArrow.addEventListener("click", () => {
     updateSlide(currentSlide);
 });
 
+function shopDrobDone() {
+    let shopDrob = document.querySelector(".shop-drowb");
+    let drobDone = document.querySelector('.ul-shop');
 
+    shopDrob.addEventListener('click', () => {
+        drobDone.classList.toggle('show-shop');
+    });
+}
+shopDrobDone();
 
 
