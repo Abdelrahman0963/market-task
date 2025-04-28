@@ -44,31 +44,30 @@ function updateSlide(index) {
     h4.textContent = slides[index].subtitle;
     imgElement.src = slides[index].image;
 }
-// document.addEventListener("DOMContentLoaded", () => {
-//     const rightArrow = document.querySelector(".arrow-icon-right");
-//     const leftArrow = document.querySelector(".arrow-icon-left");
+document.addEventListener("DOMContentLoaded", () => {
+    const rightArrow = document.querySelector(".arrow-icon-right");
+    const leftArrow = document.querySelector(".arrow-icon-left");
 
-//     function arrowClick() {
-//         rightArrow.addEventListener('click', () => {
-//             currentSlide = (currentSlide + 1) % slides.length;
-//             updateSlide(currentSlide);
-//         });
+    function arrowClick() {
+        rightArrow.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlide(currentSlide);
+        });
 
-//         leftArrow.addEventListener("click", () => {
-//             currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-//             updateSlide(currentSlide);
-//         });
-//     }
+        leftArrow.addEventListener("click", () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlide(currentSlide);
+        });
+    }
 
-//     arrowClick();
-// });
-
+    arrowClick();
+});
 function shopDrobDone() {
     let shopDrob = document.querySelector(".shop-drowb");
     let drobDone = document.querySelector('.ul-shop');
 
     shopDrob.addEventListener('click', () => {
-        drobDone.classList.toggle('show-shop');
+        drobDone.classList.toggle('ul-show');
     });
 }
 shopDrobDone();

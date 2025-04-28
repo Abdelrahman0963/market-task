@@ -141,15 +141,10 @@ header.scrolled {
 }
 .scroll-icon {
   width: 70px;
-  height: 55px;
+  height: 70px;
   background: #dcb14a;
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  display: none;
-  flex-direction: column;
+  display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -157,31 +152,33 @@ header.scrolled {
   bottom: 5%;
   cursor: pointer;
   z-index: 1111;
+  overflow: hidden; /* مهم عشان يقطع الجزء اللي بيطلع برا الدايرة */
 }
-.scroll-icon:hover {
-  animation: si 1s infinite;
-  -webkit-animation: si 1s infinite;
-}
-@keyframes si {
-  0% {
-    transform: translateY(10px);
-    -webkit-transform: translateY(10px);
-    -moz-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-    -o-transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(-10px);
-    -webkit-transform: translateY(-10px);
-    -moz-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    -o-transform: translateY(-10px);
-  }
-}
+
 .scroll-icon i {
+  position: relative;
+  animation: none;
   font-size: 30px;
   color: #fff;
 }
+
+.scroll-icon:hover i {
+  animation: loopInOut 1s infinite ease-in-out;
+  -webkit-animation: loopInOut 1s infinite ease-in-out;
+}
+
+@keyframes loopInOut {
+  0% {
+    top: 150px; /* خارج الدايرة من الأسفل */
+    opacity: 1;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
 .ic-sc {
   display: flex;
 }
@@ -853,7 +850,7 @@ section {
 .header-page2 {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 40px;
 }
@@ -898,7 +895,19 @@ section {
   color: #dcb14a;
   text-decoration-line: none;
 }
-
+.ul-shop {
+  background: #ffffff;
+  display: none;
+  flex-direction: column;
+  width: calc(100% + 35px);
+  height: 0%;
+  transform: translateX(-35px);
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+}
+.ul-show {
+  height: 100%;
+  display: flex;
+}
 .bar-in-click {
   width: 34%;
   position: absolute;
@@ -1172,8 +1181,6 @@ section {
 .shop-drowb {
   position: relative;
 }
-.ul-shop {
-}
 /* End header in page 2 */
 .containar-page2 {
   overflow: hidden;
@@ -1414,7 +1421,7 @@ section {
   color: #000;
 }
 .container-page3 .header-page2 {
-  padding: 40px 0 !important;
+  padding: 40px 100px !important;
 }
 .hero-3 {
   margin-top: 100px;
