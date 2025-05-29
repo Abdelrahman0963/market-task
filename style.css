@@ -2131,3 +2131,60 @@ section {
   display: flex;
   gap: 20px;
 }
+@media (max-width: 992px) {
+  .scroll-shop {
+    padding-top: 20px;
+  }
+  .shop-nav-pageTow {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navPar-pageTow {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  .navPar-pageTow h3 {
+    font-size: 1rem;
+  }
+  .shop-items-pageTow {
+    padding: 20px 0;
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overflow-y: hidden;
+  }
+  .btn-left {
+    top: 45%;
+  }
+  .btn-right {
+    top: 45%;
+  }
+}
+@media (max-width: 767px) {
+  .btn-left {
+    top: 50%;
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+  }
+  .btn-right {
+    top: 50%;
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+  }
+}
