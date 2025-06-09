@@ -96,7 +96,7 @@ function displayProducts(products) {
                 </div>
             </div>
             <div class="item-content-pageTow" data-category="${item.category} ${item.sumCategory}">
-                <h3>${item.title}</h3>
+                <a href="#">${item.title}</a>
                 <div class="price-pageTow">
                     <span class="new-price">${item.newPrice}</span>
                     <span class="old-price">${item.oldPrice ? item.oldPrice : ""}</span>

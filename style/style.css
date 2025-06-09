@@ -67,11 +67,11 @@ header.scrolled {
 }
 .bord {
   border-bottom: 3px solid #000;
-  transition: width 0.4s ease-out;
-  -webkit-transition: width 0.4s ease-out;
-  -moz-transition: width 0.4s ease-out;
-  -ms-transition: width 0.4s ease-out;
-  -o-transition: width 0.4s ease-out;
+  transition: 0.5s ease-out;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -ms-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
 }
 .header ul a::after {
   content: "";
@@ -2187,4 +2187,33 @@ section {
     -ms-transform: translateY(50%);
     -o-transform: translateY(50%);
   }
+}
+.offer {
+  background-image: url(https://htmldemo.net/helendo/helendo/assets/images/bg/banner_large.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.offer-content {
+  padding: 0 100px;
+  line-height: 2.5;
+}
+.offer-content h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 8px 0;
+}
+.offer-content h1 span {
+  color: rgb(255, 0, 0);
+}
+.offer-content h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000000;
+  margin: 8px 0;
 }
