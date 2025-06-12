@@ -64,48 +64,48 @@ const ProductDemos = [
     {
         image: "https://htmldemo.net/helendo/assets/images/preview/h1.jpg",
         title: "Home Default",
-        link: "https://htmldemo.net/helendo/index.html",
+        link: "http://127.0.0.1:5500/index2.html",
     },
     {
         image: "https://htmldemo.net/helendo/assets/images/preview/h2.jpg",
         title: "Home Minimal",
-        link: "https://htmldemo.net/helendo/index.html",
+        link: "http://127.0.0.1:5500/index2.html",
     }, {
         image: "https://htmldemo.net/helendo/assets/images/preview/h3.jpg",
         title: "Home Metro",
-        link: "https://htmldemo.net/helendo/index.html",
+        link: "http://127.0.0.1:5500/index2.html",
     }, {
         image: "https://htmldemo.net/helendo/assets/images/preview/h4.jpg",
         title: "Home Left Sidebar",
-        link: "https://htmldemo.net/helendo/index.html",
+        link: "http://127.0.0.1:5500/index2.html",
     }, {
         image: "https://htmldemo.net/helendo/assets/images/preview/h5.jpg",
         title: "Home Full Width",
-        link: "https://htmldemo.net/helendo/index.html",
+        link: "http://127.0.0.1:5500/index2.html",
     }, {
         image: "https://htmldemo.net/helendo/assets/images/preview/h7.jpg",
         title: "Home Parallax",
-        link: "https://htmldemo.net/helendo/index.html",
+        link: "http://127.0.0.1:5500/index2.html",
     }, {
         image: "https://htmldemo.net/helendo/assets/images/preview/h7.jpg",
         title: "Home Boxed",
-        link: "https://htmldemo.net/helendo/index.html",
+        link: "http://127.0.0.1:5500/index2.html",
     }, {
         image: "https://htmldemo.net/helendo/assets/images/preview/h8.jpg",
         title: "Home Collection",
-        link: "https://htmldemo.net/helendo/index.html",
+        link: "http://127.0.0.1:5500/index2.html",
     }, {
         image: "https://htmldemo.net/helendo/assets/images/preview/h11.jpg",
         title: "Home Categories",
-        link: "https://htmldemo.net/helendo/index.html",
+        link: "http://127.0.0.1:5500/index2.html",
     }, {
         image: "https://htmldemo.net/helendo/assets/images/preview/h12.jpg",
         title: "Home Video Features",
-        link: "https://htmldemo.net/helendo/index.html",
+        link: "http://127.0.0.1:5500/index2.html",
     }, {
         image: "https://htmldemo.net/helendo/assets/images/preview/h9.jpg",
         title: "Home Features v2 ( New )",
-        link: "https://htmldemo.net/helendo/index.html",
+        link: "http://127.0.0.1:5500/index2.html",
     },
 ]
 function displayProductDemos() {
@@ -115,7 +115,7 @@ function displayProductDemos() {
         Demos.innerHTML += `
             <div class="pre-card">
                 <a href="${item.link}">
-                    <img src="${item.image}" alt="${item.title}" />
+                    <img src="${item.image}" loading="lazy" alt="${item.title}" />
                     <span>${item.title}</span>
                 </a>
             </div>
@@ -165,7 +165,7 @@ function displayProductShop() {
         Shop.innerHTML += `
             <div class="shop-card">
                 <a href="#">
-                    <img src="${item.image}" alt="${item.title}" />
+                    <img src="${item.image}" loading="lazy" alt="${item.title}" />
                     <span>${item.title}</span>
                 </a>
             </div>
@@ -226,11 +226,49 @@ function displayProductProduct() {
         Product.innerHTML += `
             <div class="product-card">
                 <a href="#">
-                    <img src="${item.image}" alt="${item.title}" />
+                    <img src="${item.image}" loading="lazy" alt="${item.title}" />
                     <span>${item.title}</span>
                 </a>
             </div>
         `;
     });
 }
-displayProductProduct() 
+displayProductProduct()
+const productBlog = [
+    {
+        image: "https://htmldemo.net/helendo/assets/images/preview/b1.jpg",
+        title: "Blog Grid",
+    },
+    {
+        image: "https://htmldemo.net/helendo/assets/images/preview/b2.jpg",
+        title: "Blog Listing",
+    },
+    {
+        image: "https://htmldemo.net/helendo/assets/images/preview/b3.jpg",
+        title: "Blog Masonry",
+    }, {
+        image: "https://htmldemo.net/helendo/assets/images/preview/b4.jpg",
+        title: "News With Sidebar",
+    }, {
+        image: "https://htmldemo.net/helendo/assets/images/preview/b5.jpg",
+        title: "Blog Single Post V1",
+    },
+    {
+        image: "https://htmldemo.net/helendo/assets/images/preview/b6.jpg",
+        title: "Blog Single Post V2",
+    }
+]
+function displayProductBlog() {
+    const Blog = document.querySelector('.blog-cards');
+    productBlog.forEach(item => {
+        Blog.innerHTML += `
+            <div class="blog-card">
+                <a href="#">
+                    <img src="${item.image}" loading="lazy" alt="${item.title}" />
+                    <span>${item.title}</span>
+                </a>
+            </div>
+        `;
+    })
+}
+displayProductBlog() 
